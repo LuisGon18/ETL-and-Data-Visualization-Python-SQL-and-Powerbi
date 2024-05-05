@@ -1,9 +1,11 @@
 import pandas as pd
 import random as rd
 from datetime import datetime
-import os
+
+# Random Seed
 
 rd.seed(5) # numbes are always the same when runing the code
+
 file_path = r"C:01.Extraxt_Transform_Script\SalesReport.csv"
 df = pd.read_csv(file_path)
 

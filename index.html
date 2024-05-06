@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETL Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">&#9776;</a>
+            <div class="dropdown-content">
+              <a href="https://luisgon18.github.io/Portfolio/#top" class="home">Home</a>
+              <a href="#contact">Contact Me</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a href="Resume 2024.pdf" class="button" target="_blank">Download My CV</a>
+      </div>
+    </div>
+  </header id="top">
+  <section class="welcome">
+    <div class="container">
+      <div class="text">
+        <h2 class="name-title">ETL and Data Visualization</h2>
+        <p class="occupation-title">Python, SQL, and Powerbi</p>
+      </div>
+      <div class="image">
+        <img src="PF.png" alt="Your Name">
+        <section id="about"></section>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="Projects">
+      <h2>Introduction:</h2>
+      <div class="projects-content">
+        <h3>Github Repository</h3>
+        <a href="https://github.com/LuisGon18/ETL-and-Data-Visualization-Python-SQL-and-Powerbi" target="_blank">ETL-and-Data-Visualization-Python-SQL-and-Powerbi</a>
+        <h3>Dataset Source</h3>
+        <a href="https://www.kaggle.com/datasets/ishanshrivastava28/superstore-sales" target="_blank">Kaggle Superstore-Sales</a>
+        <h3>What is an ETL?</h3>
+        <p>
+          <span class="dot"></span>
+          ETL stands for Extract, Transform, and Load. It is a crucial process in data warehousing that involves three distinct steps:
+        </p>
+        <p>
+          <b> 1. Extract: </b>In this step, data is gathered from one or more sources. For my project, I have chosen to use a public dataset from Kaggle, provided in the form of a CSV file.
+        </p>
+        <p>
+          <b> 2. Transform: </b>IThe extracted data then undergoes various manipulations. These manipulations can include cleaning, filtering, validating, and aggregating data.
+        </p>
+        <p>
+          <b> 3. Load: </b>The final step involves loading the transformed data into a target system, which is often a data warehouse, database, or data lake.
+        </p>
+        <h2>Project Structure:</h2>
+        <p>
+          This project is organized into three main folders, each serving a specific purpose:
+        </p>
+        <div class="image1">
+          <img src="img1.png" alt="Main CSV">
+        </div>
+        <p>
+          <b> 1. Extract & Transform: </b> Contains a Python script responsible for extracting and transforming the data from a single large CSV file to several smaller CSV files, each representing a table of the SQL database to be created.
+        </p>
+        <p>
+          <b> 2. Database: </b> Focuses on SQL database creation and loading the transformed data into the database.
+        </p>
+        <p>
+          <b> 3. Dashboard: </b> Includes a copy of the dashboard created to analyze the cleaned and organized data.
+        </p>
+        <h2>Getting Started</h2>
+        <p>
+          To start, download the whole project and locate it in your files. In the database folder, delete every CSV file before starting (they will be recreated by the extract and transform script in the first folder), be sure to create a new folder for the project and move everything to it, then open this project folder in VS Code or your preferred code editor and follow the instructions provided in the respective README file in each of the folders.
+        </p>
+        <h2>Extract & Transform Script Overview</h2>
+        <p>
+          <b> *Note </b>You can skip this step and use the database dump ,provided in folder 2, instead to create the database and insert all the data.
+        </p>
+        <p>
+          In this folder, you can find the SalesReport.csv, which is the Kaggle public dataset obtained from the link provided in the Project Overview README file. Additionally, you'll find the Extract and Transform Python Script, which is responsible for transforming the data from the original CSV file and preparing it for loading into the SQL database.
+        </p>
+        <h3>Main .csv downloaded from Kaggle:</h3>
+        <div class="image1">
+          <img src="maincsv.png" alt="Main CSV">
+        </div>
+        <h3>Python Script Preview:</h3>
+        <div class="image1">
+          <img src="PSpreview.png" alt="Python Script Preview">
+        </div>
+        <h3>Python Script Overview</h3>
+        <p>The script imports the following libraries:</p>
+        <p>
+          <b> - Pandas:  </b>Used for reading, cleaning, and writing CSV files.
+        </p>
+        <p>
+          <b> - Datetime:  </b>Utilized to reformat date and time data from the main CSV to the accepted SQL date and time format.
+        </p>
+        <p>
+          <b> - Random:  </b>Used to assign prices to items in the dataset. The script allows for setting a seed for randomness, enabling data changes reflected in the final dashboard.
+        </p>
+        <h3>CSVs Created by the Python Script</h3>
+        <p>The script creates 5 .csv with data from the original dataset, each following normalization principles. each of this files will later be inserted in a SQL later created with the script in folder 2. Here's an explanation for each table:</p>
+        <p>
+          <b> 1. Ship Modes:  </b>
+        </p>
+        <p>
+          <b> - ID:  </b> Primary key identifying each ship mode.
+        </p>
+        <p>
+          <b> - Ship Mode:  </b> Describes how the order was shipped, including different modes like same-day delivery or standard delivery.
+        </p>
+        <p>
+          <b> 2. Customers:  </b>
+        </p>
+        <p>
+          <b> - Customer ID:  </b> Primary key for identifying each customer.
+        </p>
+        <p>
+          <b> - Customer Name, Segment:  </b> Details customer information, such as name and segment (e.g., consumer, home office purchase, corporate purchase).
+        </p>
+        <p>
+          <b> 3. Products:  </b>
+        </p>
+        <p>
+          <b> - Product ID:  </b> Primary key for identifying each product.
+        </p>
+        <p>
+          <b> - Product Name, Category, Sub-Category, Price:  </b> Includes details about each product, including its category, sub-category, and price.
+        </p>
+        <p>
+          <b> 4. Orders:  </b>
+        </p>
+        <p>
+          <b> - Order ID:  </b> Primary key for identifying each order.
+        </p>
+        <p>
+          <b> - Order Date, Ship Date, Address, State:  </b> Contains order-related information, such as order and ship dates, address, and state.
+        </p>
+        <p>
+          <b> - Ship Mode ID:  </b> Foreign key linking to the Ship Modes table.
+        </p>
+        <p>
+          <b> - Customer ID:  </b> Foreign key linking to the Customers table.
+        </p>
+        <p>
+          <b> 5. Order Details:  </b>
+        </p>
+        <p>
+          <b> - Order ID, Product ID  </b> Foreign keys connecting to Orders and Products tables. This table does not have a primary key because this is an intermediary table between a many to many relationship between orders and products.
+        </p>
+        <p>
+          <b> - Quantity Ordered, Total Cost:  </b> Contains order details, such as quantity ordered and total cost.
+        </p>
+
+
+        <h2>SQL Database Setup and Table Creation</h2>
+        <p><b> *Note </b>If you skipped the first step, go ahead and download the data base dump and run each SQL script in order on MySQL and jump to step 3, the dashboard setup</p>
+        <h3>MySQL User Creation Script</h3>
+        <p>The SQL script provided creates a new MySQL user with the following credentials:</p>
+        <p><b>- Username:</b> ADMIN</p>
+        <p><b>- Password:</b> Password</p>
+        <p>This user will only be able to interact with databases created with ADMIN_ as a prefix, ensuring isolation from other projects.</p>
+        <div class="image1">
+          <img src="sqluser.png" alt="Python Script Preview">
+        </div>
+
+        <h3>Extracted Data</h3>
+        <p>After running the Extract and Transform script in the previous folder, you should find five CSV files in this folder. Each CSV file contains cleaned, filtered, and organized data from the original dataset, ready to be used for creating database tables.</p>
+        <h3>Table Creation Python Script</h3>
+        <p>Additionally, you'll find a new Python script that utilizes the MySQL connector library. It performs the following tasks:</p>
+        <P>1. Connects to the newly created MySQL user.</P>
+        <p>2. Uses SQL language to create each of the tables in MySQL.</p>
+        <p>3. Inserts all the data into the created tables.</p>
+        <h2>Dashboard: Power BI Analysis</h2>
+        <p>In this folder, you'll find the Power BI dashboard created to analyze and understand the data extracted, transformed, and loaded in the previous steps. The Power BI dashboard provides visual insights into the cleaned and organized data from the Superstore Sales dataset. It offers various visualizations and interactive elements to explore the dataset effectively.</p>
+        <h3>Connecting MySQL Server Database to Power BI</h3>
+        <p>To connect the MySQL server database to Power BI and access the data for visualization, follow these steps:</p>
+        <p><b> *Note </b> Ensure that the MySQL server is running and accessible from your machine before attempting to connect. Also, it's worth mentioning that I chose the import option instead of direct query because the data in this project will not be changing.</p>
+        <p>1. Open Power BI Desktop.</p>
+        <p>2. Click on "Get Data" from the Home tab.</p>
+        <p>3. Select "MySQL Database" from the list of available data sources.</p>
+        <p>4. Enter the server details, including server name, database name, and credentials (username and password).</p>
+        <p>5. Click "OK" to establish the connection.</p>
+        <p>6. Choose the tables you want to import into Power BI.</p>
+        <p>7. Click "Load" to import the selected tables into Power BI for analysis.</p>
+        <h3>Dashboard:</h3>
+        <div class="image1">
+          <img src="Dashboard.png" alt="Python Script Preview">
+        </div>
+    
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+      <div class="footer" id="contact">
+        <section class="footer-section">
+          <h2>Contact Me</h2>
+          <div class="contact-info">
+            <p>Email: luis.gonzalezuni18@gmail.com</p>
+            <p>Phone: +506 8432-4233</p>
+          </div>
+        </section>
+        <section class="footer-section">
+          <h3>Social</h3>
+          <div class="social-buttons">
+            <a href="https://linkedin.com/in/luis-gonzález-b61047255" class="linkedin" target="_blank"><img src="linkedin.png" alt="LinkedIn Logo"></a>
+            <a href="https://github.com/LuisGon18" class="github" target="_blank"><img src="github.png" alt="GitHub Logo"></a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  <section>
+    <div class="copyright">
+      <div class="container">
+        <a href="https://github.com/LuisGon18">&copy; Luis Gonzalez. All rights reserved.</a>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+  <!-- Other sections of your website go here -->
+  
+</body>
+</html>

@@ -1,6 +1,0 @@
-CREATE USER 'ADMIN'@'localhost'
-IDENTIFIED BY 'Password';
-
-GRANT ALL PRIVILEGES ON `ADMIN_%`.* TO 'ADMIN'@'localhost';
-
-FLUSH PRIVILEGES;
